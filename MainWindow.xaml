@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="52" Margin="171,103,0,0" TextWrapping="Wrap" Text="Du 28/10 lúc 11:12 PM &#xD;&#xA;M thấy này thì lam cai giong v" VerticalAlignment="Top" Width="469" TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="52" Margin="171,103,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="469"/>
 
     </Grid>
 </Window>
