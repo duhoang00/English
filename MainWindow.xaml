@@ -8,6 +8,6 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TextBox HorizontalAlignment="Left" Height="52" Margin="171,103,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="469"/>
-
+        <TextBox Height="40" Margin="50,50,0,0" Text="Hi" Width="500"/>
     </Grid>
 </Window>
