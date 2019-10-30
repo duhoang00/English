@@ -10,7 +10,10 @@ namespace English
     {
         Node head;
         Node tail;
-        
 
+        public ListPhanTu()
+        {
+            head = tail = null;
+        }
     }
 }

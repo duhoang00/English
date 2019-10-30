@@ -20,14 +20,13 @@ namespace English
     /// </summary>
     public partial class MainWindow : Window
     {
+        ArrayChuCai DSChuCai = new ArrayChuCai();
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+        
     }
 }
