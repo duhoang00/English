@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace English
 {
-    class ListPhanTu
+    class XuLi
     {
-        Node head;
-        Node tail;
-        
-
     }
 }
