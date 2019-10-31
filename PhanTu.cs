@@ -8,7 +8,8 @@ namespace English
 {
     class PhanTu
     {
-        String Tu = "";
-        String Nghia = "";
+        string Tu = "";
+        string Nghia = "";
+        string Vidu = "";
     }
 }

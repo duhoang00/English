@@ -5,33 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:English"
         mc:Ignorable="d"
-        Title="Dictionary" Height="652" Width="800" ResizeMode="NoResize" Background="White">
-  <Grid HorizontalAlignment="Left" Width="794" Height="623" VerticalAlignment="Top">
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="210"/>
-      <ColumnDefinition Width="584"/>
-    </Grid.ColumnDefinitions>
-    <Grid.RowDefinitions>
-      <RowDefinition Height="623"/>
-    </Grid.RowDefinitions>
-    <GroupBox Header="Menu" HorizontalAlignment="Left" Height="603" Margin="13,9,0,0" VerticalAlignment="Top" Width="189" FontSize="16" FontWeight="Bold" BorderBrush="Black" Foreground="Black">
-      <GroupBox.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-          <GradientStop Color="#FFC36060" Offset="0.401"/>
-          <GradientStop Color="#FFE2DEDE" Offset="0.198"/>
-        </LinearGradientBrush>
-      </GroupBox.Background>
-    </GroupBox>
-    <Label Content="English:" HorizontalAlignment="Left" Height="37" Margin="23,28,0,0" VerticalAlignment="Top" Width="105" FontSize="18"/>
-    <Label Content="Vietnamese:" HorizontalAlignment="Left" Height="37" Margin="23,107,0,0" VerticalAlignment="Top" Width="105" FontSize="18"/>
-    <Label Content="Example:" HorizontalAlignment="Left" Height="37" Margin="23,191,0,0" VerticalAlignment="Top" Width="105" FontSize="18"/>
-    <TextBox x:Name="txt_Eng" HorizontalAlignment="Left" Height="37" Margin="23,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="14"/>
-    <TextBox x:Name="txt_Viet" HorizontalAlignment="Left" Height="37" Margin="23,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="14"/>
-    <TextBox x:Name="txt_Ex" HorizontalAlignment="Left" Height="202" Margin="23,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="14"/>
-    <Button x:Name="btn_Nhap" Content="Insert" HorizontalAlignment="Left" Height="41" Margin="23,446,0,0" VerticalAlignment="Top" Width="166" FontSize="20" FontWeight="Bold"/>
-    <Button x:Name="btn_Sua" Content="Fix" HorizontalAlignment="Left" Height="41" Margin="23,503,0,0" VerticalAlignment="Top" Width="166" FontSize="20" FontWeight="Bold"/>
-    <Button x:Name="btn_Xoa" Content="Delete" HorizontalAlignment="Left" Height="41" Margin="23,562,0,0" VerticalAlignment="Top" Width="166" FontSize="20" FontWeight="Bold"/>
-    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="623" VerticalAlignment="Top" Width="9" Grid.Column="1" Background="Black"/>
-  </Grid>
+        Title="Dictionary" Height="650" Width="1000" ResizeMode="NoResize" Background="White">
+    <Grid HorizontalAlignment="Left" Width="990" Height="623" VerticalAlignment="Top" Margin="0,0,0,-2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="210"/>
+            <ColumnDefinition Width="584"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="563"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Menu" HorizontalAlignment="Left" Height="613" Margin="10,0,0,0" VerticalAlignment="Top" Width="196" FontSize="16" FontWeight="Bold" BorderBrush="Black" Foreground="Black" Grid.RowSpan="2">
+            <GroupBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC36060" Offset="0.401"/>
+                    <GradientStop Color="#FFE2DEDE" Offset="0.198"/>
+                </LinearGradientBrush>
+            </GroupBox.Background>
+        </GroupBox>
+        <Label Content="English:" HorizontalAlignment="Left" Height="37" Margin="23,28,0,0" VerticalAlignment="Top" Width="105" FontSize="18" Grid.RowSpan="2"/>
+        <Label Content="Vietnamese:" HorizontalAlignment="Left" Height="37" Margin="23,47,0,0" VerticalAlignment="Top" Width="105" FontSize="18" Grid.Row="1"/>
+        <Label Content="Example:" HorizontalAlignment="Left" Height="37" Margin="23,131,0,0" VerticalAlignment="Top" Width="105" FontSize="18" Grid.Row="1"/>
+        <TextBox x:Name="txt_Eng" HorizontalAlignment="Left" Height="37" Margin="23,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="14" Grid.Row="1"/>
+        <TextBox x:Name="txt_Viet" HorizontalAlignment="Left" Height="37" Margin="23,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="14" Grid.Row="1"/>
+        <TextBox x:Name="txt_Ex" HorizontalAlignment="Left" Height="202" Margin="23,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="14" Grid.Row="1"/>
+        <Button x:Name="btn_Nhap" Content="Insert" HorizontalAlignment="Left" Height="41" Margin="23,386,0,0" VerticalAlignment="Top" Width="166" FontSize="20" FontWeight="Bold" Grid.Row="1"/>
+        <Button x:Name="btn_Sua" Content="Fix" HorizontalAlignment="Left" Height="41" Margin="23,443,0,0" VerticalAlignment="Top" Width="166" FontSize="20" FontWeight="Bold" Grid.Row="1"/>
+        <Button x:Name="btn_Xoa" Content="Delete" HorizontalAlignment="Left" Height="41" Margin="23,502,0,0" VerticalAlignment="Top" Width="166" FontSize="20" FontWeight="Bold" Grid.Row="1"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="623" VerticalAlignment="Top" Width="9" Grid.Column="1" Background="Black" Grid.RowSpan="2"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="39" Margin="29,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" FontSize="20"/>
+        <Button Grid.Column="1" HorizontalAlignment="Left" Height="39" Margin="429,14,0,0" VerticalAlignment="Top" Width="60">
+            <Image Height="39" Source="01-512.png" Stretch="Fill" Width="60"/>
+        </Button>
+        <Button x:Name="btn_Game" Content="Game" Grid.Column="1" HorizontalAlignment="Left" Height="39" Margin="513,14,-79,0" VerticalAlignment="Top" Width="151" FontSize="20" FontWeight="Bold"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="7" Margin="9,58,-194,0" VerticalAlignment="Top" Width="770" Background="Black" Grid.RowSpan="2"/>
+    </Grid>
 </Window>
 
