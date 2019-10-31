@@ -26,10 +26,5 @@ namespace English
         {
             InitializeComponent();
         }
-
-        private void Txt_Viet_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }

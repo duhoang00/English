@@ -10,6 +10,7 @@ namespace English
     {
         string Tu = "";
         string Nghia = "";
+        string Loaitu = "";
         string Vidu = "";
     }
 }
