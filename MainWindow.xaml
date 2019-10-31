@@ -22,14 +22,20 @@
                     <GradientStop Color="#FFE2DEDE" Offset="0.198"/>
                 </LinearGradientBrush>
             </GroupBox.Background>
+            <ComboBox HorizontalAlignment="Left" Height="42" Margin="10,214,0,0" VerticalAlignment="Top" Width="162">
+                <ComboBoxItem Content="Noun"/>
+                <ComboBoxItem Content="Adjective"/>
+                <ComboBoxItem Content="Verb"/>
+                <ComboBoxItem Content="Adverb"/>
+            </ComboBox>
         </GroupBox>
-        <Label Content="English:" HorizontalAlignment="Left" Height="37" Margin="23,28,0,0" VerticalAlignment="Top" Width="105" FontSize="18" Grid.RowSpan="2"/>
-        <Label Content="Vietnamese:" HorizontalAlignment="Left" Height="37" Margin="23,47,0,0" VerticalAlignment="Top" Width="105" FontSize="18" Grid.Row="1"/>
+        <Label Content="English" HorizontalAlignment="Left" Height="37" Margin="23,28,0,0" VerticalAlignment="Top" Width="105" FontSize="18" Grid.RowSpan="2"/>
+        <Label Content="Vietnamese" HorizontalAlignment="Left" Height="37" Margin="23,47,0,0" VerticalAlignment="Top" Width="105" FontSize="18" Grid.Row="1"/>
         <Label Content="Word type" HorizontalAlignment="Left" Height="37" Margin="23,131,0,0" VerticalAlignment="Top" Width="105" FontSize="18" Grid.Row="1"/>
         <TextBox x:Name="txt_Eng" HorizontalAlignment="Left" Height="37" Margin="23,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="14" Grid.Row="1"/>
         <TextBox x:Name="txt_Viet" HorizontalAlignment="Left" Height="37" Margin="23,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="14" Grid.Row="1"/>
-        <Button x:Name="btn_Nhap" Content="Insert" HorizontalAlignment="Left" Height="41" Margin="23,386,0,0" VerticalAlignment="Top" Width="166" FontSize="20" FontWeight="Bold" Grid.Row="1"/>
-        <Button x:Name="btn_Sua" Content="Fix" HorizontalAlignment="Left" Height="41" Margin="23,443,0,0" VerticalAlignment="Top" Width="166" FontSize="20" FontWeight="Bold" Grid.Row="1"/>
+        <Button x:Name="btn_Nhap" Content="Insert" HorizontalAlignment="Left" Height="41" Margin="23,400,0,0" VerticalAlignment="Top" Width="166" FontSize="20" FontWeight="Bold" Grid.Row="1"/>
+        <Button x:Name="btn_Sua" Content="Fix" HorizontalAlignment="Left" Height="41" Margin="23,450,0,0" VerticalAlignment="Top" Width="166" FontSize="20" FontWeight="Bold" Grid.Row="1"/>
         <Button x:Name="btn_Xoa" Content="Delete" HorizontalAlignment="Left" Height="41" Margin="23,502,0,0" VerticalAlignment="Top" Width="166" FontSize="20" FontWeight="Bold" Grid.Row="1"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="623" VerticalAlignment="Top" Width="9" Grid.Column="1" Background="Black" Grid.RowSpan="2"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="39" Margin="29,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" FontSize="20"/>
@@ -42,10 +48,8 @@
         <Label Content="Quả táo" Grid.Column="1" HorizontalAlignment="Left" Height="74" Margin="28.6,159,-172.8,0" Grid.Row="1" VerticalAlignment="Top" Width="729" FontSize="36"/>
         <Label Content="Yesterday, I ate an apple and it was really &#xD;&#xA;tasty" Grid.Column="1" HorizontalAlignment="Left" Height="109" Margin="28.6,238,-172.8,0" Grid.Row="1" VerticalAlignment="Top" Width="729" FontSize="36"/>
         <Label Content="Noun - Danh từ" Grid.Column="1" HorizontalAlignment="Left" Height="74" Margin="28.6,89,-172.8,0" Grid.Row="1" VerticalAlignment="Top" Width="729" FontSize="36" FontStyle="Italic"/>
-        <CheckBox Content="Noun" HorizontalAlignment="Left" Margin="23,173,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24" Height="42"/>
-        <CheckBox Content="Verb" HorizontalAlignment="Left" Margin="23,220,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24" Height="42"/>
-        <CheckBox Content="Adjective" HorizontalAlignment="Left" Margin="23,267,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24" Height="42"/>
-        <CheckBox Content="Adverb" HorizontalAlignment="Left" Margin="23,314,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24" Height="42"/>
+        <Label Content="Example" HorizontalAlignment="Left" Height="37" Margin="23,221,0,0" VerticalAlignment="Top" Width="105" FontSize="18" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Left" Height="123" Margin="23,263,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="14"/>
     </Grid>
 </Window>
 
