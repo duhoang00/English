@@ -47,11 +47,11 @@
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="623" VerticalAlignment="Top" Width="9" Background="Black" Margin="252,0,0,0"/>
         <TextBox x:Name="txt_Seach" HorizontalAlignment="Left" Height="39" Margin="20,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212" FontSize="20"/>
         <Label Content="Apple " HorizontalAlignment="Left" Height="74" Margin="286,70,0,0" VerticalAlignment="Top" Width="188" FontSize="36" FontWeight="Bold" Foreground="#FFA30B0B"/>
-        <Label Content="- Quả táo&#xD;&#xA;- Hãng công nghệ" HorizontalAlignment="Left" Height="152" Margin="286,172,-115.2,0" VerticalAlignment="Top" Width="694" FontSize="36"/>
-        <Label Content="- Yesterday, I ate an apple and it was really &#xA;tasty&#xD;&#xA;- I just bought a brand new Iphone from &#xD;&#xA;Apple store and I don't understand why &#xD;&#xA;they  named their company is Apple" HorizontalAlignment="Left" Height="275" Margin="286,329,-115.2,0" VerticalAlignment="Top" Width="694" FontSize="36"/>
+        <Label Content="- Quả táo&#xD;&#xA;- Hãng công nghệ" HorizontalAlignment="Left" Height="152" Margin="286,172,-115.2,0" VerticalAlignment="Top" Width="694" FontSize="36" FontFamily="Cambria"/>
+        <Label Content="- Yesterday, I ate an apple and it was really &#xA;tasty&#xD;&#xA;- I just bought a brand new Iphone from &#xD;&#xA;Apple store and I don't understand why &#xD;&#xA;they named their company is Apple" HorizontalAlignment="Left" Height="275" Margin="286,329,-115.2,0" VerticalAlignment="Top" Width="694" FontSize="36" FontFamily="Cambria"/>
         <Label Content="noun" HorizontalAlignment="Left" Height="35" Margin="286,132,0,0" VerticalAlignment="Top" Width="376" FontSize="20" FontStyle="Italic"/>
         <TabControl HorizontalAlignment="Left" Height="41" Margin="262,17,-121.2,0" VerticalAlignment="Top" Width="724">
-            <TabItem Header="My dictionary" FontSize="20">
+            <TabItem Header="My dictionary" FontSize="20" FontFamily="Cambria">
                 <Grid>
                     <Grid.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -61,13 +61,13 @@
                     </Grid.Background>
                 </Grid>
             </TabItem>
-            <TabItem Header="Important words" FontSize="20">
+            <TabItem Header="Important words" FontSize="20" FontFamily="Cambria">
                 <Grid Background="Black"/>
             </TabItem>
         </TabControl>
         <Button Content="Game" HorizontalAlignment="Left" Height="41" Margin="20,563,0,0" VerticalAlignment="Top" Width="212" FontSize="20" FontWeight="Bold"/>
-        <Label Content="Navigator" HorizontalAlignment="Left" Height="72" Margin="20,10,0,0" VerticalAlignment="Top" Width="212" FontSize="45" Foreground="White"/>
-        <Label Content="Advanced Learner's Dictionary" HorizontalAlignment="Left" Height="39" Margin="20,70,0,0" VerticalAlignment="Top" Width="212" FontSize="15" Foreground="White"/>
+        <Label Content="Navigator" HorizontalAlignment="Left" Height="72" Margin="20,10,0,0" VerticalAlignment="Top" Width="212" FontSize="45" Foreground="White" FontFamily="Cambria"/>
+        <Label Content="Advanced Learner's Dictionary" HorizontalAlignment="Left" Height="39" Margin="20,70,0,0" VerticalAlignment="Top" Width="212" FontSize="15" Foreground="White" FontFamily="Cambria"/>
         <Label Content="Search" HorizontalAlignment="Left" Height="35" Margin="10,109,0,0" VerticalAlignment="Top" Width="155" FontSize="20" Foreground="White"/>
     </Grid>
 </Window>
