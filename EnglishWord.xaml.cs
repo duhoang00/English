@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace English
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for EnglishWord.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EnglishWord : Window
     {
-        ArrayChuCai DSChuCai = new ArrayChuCai();
-
-        public MainWindow()
+        public EnglishWord()
         {
             InitializeComponent();
-        }
-
-        private void Btn_Nhap_Click(object sender, RoutedEventArgs e)
-        {
-            new EnglishWord().Show();
         }
     }
 }
