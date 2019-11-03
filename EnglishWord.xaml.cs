@@ -33,6 +33,14 @@ namespace English
             DS.ThemTu(Word, txt_WordMeaning.Text, WordType ,txt_WordExample.Text);
         }
 
+        private void btn_Delete_Click(object sender, RoutedEventArgs e)
+        {
+            txt_Word.Text= "";
+            txt_WordMeaning.Text = "";
+            txt_WordExample.Text = "";
+            cmb_WordType.SelectedItem = null;
+        }
+
         private void btn_Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
