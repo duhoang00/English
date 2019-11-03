@@ -87,6 +87,7 @@
   <ItemGroup>
     <Compile Include="Node.cs" />
     <Compile Include="PhanTu.cs" />
+    <Compile Include="PhanTuNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

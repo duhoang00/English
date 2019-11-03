@@ -7,22 +7,29 @@
         mc:Ignorable="d"
         Title="EnglishWord" Height="476.411" Width="800">
     <Grid>
-        <Label Content="English Word" HorizontalAlignment="Left" Height="38" Margin="10,10,0,0" VerticalAlignment="Top" Width="130" FontSize="20"/>
-        <TextBox HorizontalAlignment="Left" Height="38" Margin="168,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" FontSize="20"/>
-        <Label Content="Your meaning" HorizontalAlignment="Left" Height="38" Margin="10,66,0,0" VerticalAlignment="Top" Width="130" FontSize="20"/>
-        <TextBox HorizontalAlignment="Left" Height="132" Margin="168,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="616" FontSize="20"/>
-        <Label Content="Word type" HorizontalAlignment="Left" Height="38" Margin="10,216,0,0" VerticalAlignment="Top" Width="130" FontSize="20"/>
-        <CheckBox Content="Noun" HorizontalAlignment="Left" Height="38" Margin="168,216,0,0" VerticalAlignment="Top" Width="81" FontSize="20"/>
-        <CheckBox Content="Verb" HorizontalAlignment="Left" Height="38" Margin="266,216,0,0" VerticalAlignment="Top" Width="82" FontSize="20"/>
-        <CheckBox Content="Adjective" HorizontalAlignment="Left" Height="38" Margin="353,216,0,0" VerticalAlignment="Top" Width="122" FontSize="20"/>
-        <CheckBox Content="Adverb" HorizontalAlignment="Left" Height="38" Margin="505,216,0,0" VerticalAlignment="Top" Width="107" FontSize="20"/>
-        <CheckBox Content="I don't know" HorizontalAlignment="Left" Height="38" Margin="617,216,0,0" VerticalAlignment="Top" Width="141" FontSize="20"/>
-        <Label Content="Your example" HorizontalAlignment="Left" Height="38" Margin="10,260,0,0" VerticalAlignment="Top" Width="130" FontSize="20"/>
-        <TextBox HorizontalAlignment="Left" Height="132" Margin="168,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="616" FontSize="20"/>
-        <Button Content="Exit" HorizontalAlignment="Left" Height="41" Margin="572,396,0,0" VerticalAlignment="Top" Width="169" FontSize="20" Background="#FFCA2A17" BorderBrush="White" Foreground="White"/>
-        <Button Content="Ok" HorizontalAlignment="Left" Height="41" Margin="168,396,0,0" VerticalAlignment="Top" Width="169" FontSize="20" Background="#FF12BF14" BorderBrush="White" Foreground="White"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Height="41" Margin="369,396,0,0" VerticalAlignment="Top" Width="169" FontSize="20" Background="#FF121ABF" BorderBrush="White" Foreground="White"/>
-        <Button Content="Mark" HorizontalAlignment="Left" Height="38" Margin="348,10,0,0" VerticalAlignment="Top" Width="42" Background="#FFF05C0A"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF251652"/>
+                <GradientStop Color="#FFD11133" Offset="0.81"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="English Word" HorizontalAlignment="Left" Height="38" Margin="10,10,0,0" VerticalAlignment="Top" Width="140" FontSize="20" Foreground="White" FontWeight="Bold"/>
+        <TextBox x:Name="txt_Word" HorizontalAlignment="Left" Height="38" Margin="168,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" FontSize="20"/>
+        <Label Content="Your meaning" HorizontalAlignment="Left" Height="38" Margin="10,66,0,0" VerticalAlignment="Top" Width="140" FontSize="20" Foreground="White" FontWeight="Bold"/>
+        <TextBox x:Name="txt_WordMeaning" HorizontalAlignment="Left" Height="132" Margin="168,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="601" FontSize="20"/>
+        <Label Content="Word type" HorizontalAlignment="Left" Height="38" Margin="10,216,0,0" VerticalAlignment="Top" Width="140" FontSize="20" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Your example" HorizontalAlignment="Left" Height="38" Margin="10,260,0,0" VerticalAlignment="Top" Width="140" FontSize="20" Foreground="White" FontWeight="Bold"/>
+        <TextBox x:Name="txt_WordExample" HorizontalAlignment="Left" Height="132" Margin="168,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="601" FontSize="20"/>
+        <Button x:Name="btn_Exit" Content="Exit" HorizontalAlignment="Left" Height="41" Margin="572,396,0,0" VerticalAlignment="Top" Width="169" FontSize="20" Background="#FFCA2A17" BorderBrush="White" Foreground="White" FontWeight="Bold" Click="btn_Exit_Click"/>
+        <Button x:Name="btn_OK" Content="OK" HorizontalAlignment="Left" Height="41" Margin="168,396,0,0" VerticalAlignment="Top" Width="169" FontSize="20" Background="#FF12BF14" BorderBrush="White" Foreground="White" Click="btn_OK_Click" FontWeight="Bold"/>
+        <Button x:Name="btn_Delete" Content="Delete" HorizontalAlignment="Left" Height="41" Margin="369,396,0,0" VerticalAlignment="Top" Width="169" FontSize="20" Background="#FF121ABF" BorderBrush="White" Foreground="White" FontWeight="Bold"/>
+        <Button x:Name="btn_Mark" Content="Mark" HorizontalAlignment="Left" Height="38" Margin="348,10,0,0" VerticalAlignment="Top" Width="42" Background="#FFF05C0A" Foreground="White"/>
+        <ComboBox x:Name="cmb_WordType" HorizontalAlignment="Left" Height="38" Margin="168,216,0,0" VerticalAlignment="Top" Width="184" FontSize="20">
+            <ComboBoxItem Content="Noun"/>
+            <ComboBoxItem Content="Verb"/>
+            <ComboBoxItem Content="Adjective"/>
+            <ComboBoxItem Content="Adverb"/>
+        </ComboBox>
 
     </Grid>
 </Window>

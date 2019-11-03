@@ -48,10 +48,10 @@
         <TabControl x:Name="tab_Control" HorizontalAlignment="Left" Height="606" Margin="262,17,-125.2,0" VerticalAlignment="Top" Width="728">
             <TabItem x:Name="tab_Dictionary" Header="My dictionary" FontSize="20" FontFamily="Cambria" Height="29" Margin="-2,0,-1.4,-0.2" VerticalAlignment="Top">
                 <Grid Background="#FFDDD7B1" Margin="0,0,-3.6,-0.2">
-                    <Label Content="Apple " HorizontalAlignment="Left" Height="78" Margin="0,2,0,0" VerticalAlignment="Top" Width="196" FontSize="36" FontWeight="Bold" Foreground="#FFA30B0B"/>
-                    <Label Content="- Quả táo&#xA;- Hãng công nghệ" HorizontalAlignment="Left" Height="161" Margin="0,110,-1.6,0" VerticalAlignment="Top" Width="724" FontSize="36" FontFamily="Cambria"/>
-                    <Label Content="- Yesterday, I ate an apple and it was really &#xA;tasty&#xA;- I just bought a brand new Iphone from &#xA;Apple store and I don't understand why &#xA;they named their company is Apple" HorizontalAlignment="Left" Height="292" Margin="0,277,-1.6,-0.2" VerticalAlignment="Top" Width="724" FontSize="36" FontFamily="Cambria"/>
-                    <Label Content="noun" HorizontalAlignment="Left" Height="38" Margin="0,67,0,0" VerticalAlignment="Top" Width="393" FontSize="20" FontStyle="Italic"/>
+                    <Label x:Name="txt_TheWord" Content="Apple " HorizontalAlignment="Left" Height="50" Margin="18,10,0,0" VerticalAlignment="Top" Width="188" FontSize="36" FontWeight="Bold" Foreground="#FFA30B0B"/>
+                    <Label x:Name="txt_WordMeaning" Content="- Quả táo&#xA;- Hãng công nghệ" HorizontalAlignment="Left" Height="162" Margin="18,108,0,0" VerticalAlignment="Top" Width="677" FontSize="36" FontFamily="Cambria" Foreground="Black"/>
+                    <Label x:Name="txt_WordExample" Content="- Yesterday, I ate an apple and it was really &#xA;tasty&#xA;- I just bought a brand new Iphone from &#xA;Apple store and I don't understand why &#xA;they named their company is Apple" HorizontalAlignment="Left" Height="293" Margin="18,276,0,0" VerticalAlignment="Top" Width="708" FontSize="36" FontFamily="Cambria"/>
+                    <Label x:Name="txt_WordType" Content="noun" HorizontalAlignment="Left" Height="38" Margin="18,65,0,0" VerticalAlignment="Top" Width="384" FontSize="22" FontStyle="Italic"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tab_MyWord" Header="My words" FontSize="20" FontFamily="Cambria">
@@ -59,10 +59,17 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
+                    <ListView HorizontalAlignment="Left" Height="530" VerticalAlignment="Top" Width="663" Margin="0,53,0,-12.6">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button Content="Game" HorizontalAlignment="Left" Height="41" Margin="20,563,0,0" VerticalAlignment="Top" Width="212" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="btn_Game" Content="Game" HorizontalAlignment="Left" Height="41" Margin="20,563,0,0" VerticalAlignment="Top" Width="212" FontSize="20" FontWeight="Bold"/>
         <Label Content="Navigator" HorizontalAlignment="Left" Height="72" Margin="20,10,0,0" VerticalAlignment="Top" Width="212" FontSize="45" Foreground="White" FontFamily="Cambria"/>
         <Label Content="Advanced Learner's Dictionary" HorizontalAlignment="Left" Height="39" Margin="20,70,0,0" VerticalAlignment="Top" Width="212" FontSize="15" Foreground="White" FontFamily="Cambria"/>
         <Label Content="Search" HorizontalAlignment="Left" Height="35" Margin="10,109,0,0" VerticalAlignment="Top" Width="155" FontSize="20" Foreground="White"/>

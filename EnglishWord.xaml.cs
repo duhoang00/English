@@ -19,9 +19,23 @@ namespace English
     /// </summary>
     public partial class EnglishWord : Window
     {
+        ArrayChuCai DS = new ArrayChuCai();
+
         public EnglishWord()
         {
             InitializeComponent();
+        }
+
+        private void btn_OK_Click(object sender, RoutedEventArgs e)
+        {
+            String Word = txt_Word.Text.ToUpper();
+            string WordType = this.cmb_WordType.SelectionBoxItem.ToString();
+            DS.ThemTu(Word, txt_WordMeaning.Text, WordType ,txt_WordExample.Text);
+        }
+
+        private void btn_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

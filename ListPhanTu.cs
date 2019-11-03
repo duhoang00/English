@@ -8,12 +8,13 @@ namespace English
 {
     class ListPhanTu
     {
-        Node head;
-        Node tail;
+        public PhanTuNode head;
+        public String FL;
 
         public ListPhanTu()
         {
-            head = tail = null;
+            head = null;
+            FL = "";
         }
     }
 }

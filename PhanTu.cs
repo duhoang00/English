@@ -8,9 +8,25 @@ namespace English
 {
     class PhanTu
     {
-        string Tu = "";
-        string Nghia = "";
-        string Loaitu = "";
-        string Vidu = "";
+        public String Word;
+        public String WordMeaning;
+        public String WordType;
+        public String WordExample;
+
+        public PhanTu()
+        {
+            Word = "";
+            WordMeaning = "";
+            WordType = "";
+            WordExample = "";
+        }
+
+        public PhanTu(String Tu, String Nghia, String LoaiTu, String ViDu)
+        {
+            Word = Tu;
+            WordMeaning = Nghia;
+            WordType = LoaiTu;
+            WordExample = ViDu;
+        }
     }
 }
