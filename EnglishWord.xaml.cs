@@ -24,6 +24,7 @@ namespace English
         public EnglishWord()
         {
             InitializeComponent();
+            
         }
 
         private void btn_OK_Click(object sender, RoutedEventArgs e)
@@ -44,6 +45,18 @@ namespace English
         private void btn_Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_Mark_Click(object sender, RoutedEventArgs e)
+        {
+            if(btn_Mark.Content.ToString() == "Mark")
+            {
+                btn_Mark.Content = "Unmark";
+            }
+            else if (btn_Mark.Content.ToString() == "Unmark")
+            {
+                btn_Mark.Content = "Mark";
+            }
         }
     }
 }
