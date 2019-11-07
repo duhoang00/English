@@ -5,28 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:English"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="EnglishWord" Height="476.411" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush/>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF2618A6" Offset="1"/>
+                <GradientStop Color="#FF289C6C"/>
+            </LinearGradientBrush>
         </Grid.Background>
         <Label Content="English Word" HorizontalAlignment="Left" Height="38" Margin="10,10,0,0" VerticalAlignment="Top" Width="140" FontSize="20" Foreground="White" FontWeight="Bold"/>
         <TextBox x:Name="txt_Word" HorizontalAlignment="Left" Height="38" Margin="168,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" FontSize="20"/>
         <Label Content="Your meaning" HorizontalAlignment="Left" Height="38" Margin="10,66,0,0" VerticalAlignment="Top" Width="140" FontSize="20" Foreground="White" FontWeight="Bold"/>
-        <TextBox x:Name="txt_WordMeaning" HorizontalAlignment="Left" Height="132" Margin="168,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="601" FontSize="20"/>
+        <TextBox x:Name="txt_WordMeaning" AcceptsReturn="True" HorizontalAlignment="Left" Height="132" Margin="168,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="601" FontSize="20"/>
         <Label Content="Word type" HorizontalAlignment="Left" Height="38" Margin="10,216,0,0" VerticalAlignment="Top" Width="140" FontSize="20" Foreground="White" FontWeight="Bold"/>
         <Label Content="Your example" HorizontalAlignment="Left" Height="38" Margin="10,260,0,0" VerticalAlignment="Top" Width="140" FontSize="20" Foreground="White" FontWeight="Bold"/>
-        <TextBox x:Name="txt_WordExample" HorizontalAlignment="Left" Height="132" Margin="168,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="601" FontSize="20"/>
-        <Button x:Name="btn_Exit" Content="Exit" HorizontalAlignment="Left" Height="41" Margin="572,396,0,0" VerticalAlignment="Top" Width="169" FontSize="20" Background="#FFCA2A17" BorderBrush="White" Foreground="White" FontWeight="Bold" Click="btn_Exit_Click"/>
-        <Button x:Name="btn_OK" Content="OK" HorizontalAlignment="Left" Height="41" Margin="168,396,0,0" VerticalAlignment="Top" Width="169" FontSize="20" Background="#FF12BF14" BorderBrush="White" Foreground="White" Click="btn_OK_Click" FontWeight="Bold"/>
-        <Button x:Name="btn_Delete" Content="Delete" HorizontalAlignment="Left" Height="41" Margin="369,396,0,0" VerticalAlignment="Top" Width="169" FontSize="20" Background="#FF121ABF" BorderBrush="White" Foreground="White" FontWeight="Bold" Click="btn_Delete_Click"/>
-        <Button x:Name="btn_Mark" HorizontalAlignment="Left" Height="38" Margin="348,10,0,0" VerticalAlignment="Top" Width="63" Background="#FFF05C0A" Foreground="White" Click="btn_Mark_Click"/>
+        <TextBox x:Name="txt_WordExample" AcceptsReturn="True" HorizontalAlignment="Left" Height="132" Margin="168,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="601" FontSize="20"/>
+        <Button x:Name="btn_OK" Content="OK" HorizontalAlignment="Left" Height="41" Margin="254,396,0,0" VerticalAlignment="Top" Width="169" FontSize="20" Background="#FF12BF14" BorderBrush="White" Foreground="White" Click="btn_OK_Click" FontWeight="Bold"/>
+        <Button x:Name="btn_Delete" Content="Delete" HorizontalAlignment="Left" Height="41" Margin="506,396,0,0" VerticalAlignment="Top" Width="169" FontSize="20" Background="#FFFA1B00" BorderBrush="White" Foreground="White" FontWeight="Bold" Click="btn_Delete_Click"/>
+        <Button x:Name="btn_Mark" HorizontalAlignment="Left" Height="38" Margin="348,10,0,0" VerticalAlignment="Top" Width="63" Foreground="White" Click="btn_Mark_Click" Content="Mark" ClipToBounds="True" FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1B7B8E" Offset="0"/>
+                    <GradientStop Color="#FF33474B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
         <ComboBox x:Name="cmb_WordType" HorizontalAlignment="Left" Height="38" Margin="168,216,0,0" VerticalAlignment="Top" Width="184" FontSize="20">
             <ComboBoxItem Content="Noun"/>
             <ComboBoxItem Content="Verb"/>
             <ComboBoxItem Content="Adjective"/>
             <ComboBoxItem Content="Adverb"/>
         </ComboBox>
-
     </Grid>
 </Window>

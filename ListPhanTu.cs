@@ -9,11 +9,12 @@ namespace English
     class ListPhanTu
     {
         public PhanTuNode head;
+        public PhanTuNode tail;
         public String FL;
 
         public ListPhanTu()
         {
-            head = null;
+            head = tail = null;
             FL = "";
         }
     }

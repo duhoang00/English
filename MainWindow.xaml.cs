@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace English
 {
     /// <summary>
@@ -27,7 +28,21 @@ namespace English
 
         private void Btn_Nhap_Click(object sender, RoutedEventArgs e)
         {
-            new EnglishWord().Show();
+            EnglishWord EnglishWordWindow = new EnglishWord();
+            EnglishWordWindow.Show();
+        }
+
+        public void txt_Seach_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txt_Seach.Text != "")
+            {
+                String key = txt_Seach.Text.ToUpper();
+                EnglishWord EnglishWordWindow = new EnglishWord(key);
+            }
+            else
+            {
+                lv_Words.Items.Clear();
+            }
         }
     }
 }

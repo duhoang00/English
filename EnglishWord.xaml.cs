@@ -17,34 +17,49 @@ namespace English
     /// <summary>
     /// Interaction logic for EnglishWord.xaml
     /// </summary>
-    public partial class EnglishWord : Window
+    public partial class EnglishWord
     {
         ArrayChuCai DS = new ArrayChuCai();
 
         public EnglishWord()
         {
             InitializeComponent();
-            
+        }
+
+        public EnglishWord(String key)
+        {
+            DS.WordSearch(key);
         }
 
         private void btn_OK_Click(object sender, RoutedEventArgs e)
         {
-            String Word = txt_Word.Text.ToUpper();
-            string WordType = this.cmb_WordType.SelectionBoxItem.ToString();
-            DS.ThemTu(Word, txt_WordMeaning.Text, WordType ,txt_WordExample.Text);
+            if (txt_Word.Text != "")
+            {
+                String Word = txt_Word.Text.ToUpper();
+                txt_WordExample.Text = "";
+                txt_WordMeaning.Text = "";
+                String WordType = "";
+                WordType = this.cmb_WordType.SelectionBoxItem.ToString();
+                DS.ThemTu(Word, txt_WordMeaning.Text, WordType, txt_WordExample.Text);
+                MessageBox.Show("Success", "Result", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Please enter some word", "WARNING!!!", MessageBoxButton.OK, MessageBoxImage.Warning); 
+            }
         }
 
         private void btn_Delete_Click(object sender, RoutedEventArgs e)
         {
-            txt_Word.Text= "";
-            txt_WordMeaning.Text = "";
-            txt_WordExample.Text = "";
-            cmb_WordType.SelectedItem = null;
-        }
-
-        private void btn_Exit_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
+            MessageBoxResult result = MessageBox.Show("This word gonna be deleted \n This can not be undone \n Are you sure","WARNING!!!",MessageBoxButton.YesNo,MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                txt_Word.Text = "";
+                txt_WordMeaning.Text = "";
+                txt_WordExample.Text = "";
+                cmb_WordType.SelectedItem = null;
+                this.Close();
+            }
         }
 
         private void btn_Mark_Click(object sender, RoutedEventArgs e)
