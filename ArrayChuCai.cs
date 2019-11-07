@@ -176,14 +176,16 @@ namespace English
             PhanTuNode Donald = CaiList.head;
 
             MainWindow Form = Application.Current.Windows[0] as MainWindow;
-
             Form.lv_Words.Items.Clear();
 
-            while (Donald != null && Donald.data.Word.Contains(key))
+            while (Donald != null)
             {
-                Form.lv_Words.Items.Add(Donald.data.Word);
+                if (Donald != null && Donald.data.Word.Contains(key))
+                {
+                    Form.lv_Words.Items.Add(Donald.data.Word);                   
+                }
                 Donald = Donald.next;
             }
-        }
+        }       
     }
 }
