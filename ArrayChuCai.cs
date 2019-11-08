@@ -145,6 +145,7 @@ namespace English
                             DSPT[n].tail = NodeTheWord;
                         }
                     }
+                    readtext.Close();
                 }
             }
         }

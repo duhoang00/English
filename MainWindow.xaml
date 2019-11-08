@@ -61,12 +61,12 @@
                     <Button x:Name="btn_Delete" Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Margin="628,503,0,0" Height="57" FontWeight="Bold" Click="btn_Delete_Click"/>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="tab_MyWord" Header="My words" FontSize="20" FontFamily="Cambria">
+            <TabItem x:Name="tab_MyWord" Header="My words" FontSize="20" FontFamily="Cambria" Margin="-3.4,0,-1.6,-0.2">
                 <Grid Background="#FFDDD7B1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <ListView HorizontalAlignment="Left" Height="530" VerticalAlignment="Top" Width="663" Margin="0,53,0,-12.6">
+                    <ListView HorizontalAlignment="Left" Height="550" VerticalAlignment="Top" Width="702" Margin="10,10,0,0">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn/>
@@ -80,7 +80,7 @@
         <Label Content="Navigator" HorizontalAlignment="Left" Height="72" Margin="20,10,0,0" VerticalAlignment="Top" Width="212" FontSize="45" Foreground="White" FontFamily="Cambria"/>
         <Label Content="Advanced Learner's Dictionary" HorizontalAlignment="Left" Height="39" Margin="20,70,0,0" VerticalAlignment="Top" Width="212" FontSize="15" Foreground="White" FontFamily="Cambria"/>
         <Label Content="Search" HorizontalAlignment="Left" Height="35" Margin="10,109,0,0" VerticalAlignment="Top" Width="155" FontSize="20" Foreground="White"/>
-        <Button x:Name="btn_Refresh" Content="Refresh" HorizontalAlignment="Left" VerticalAlignment="Top" Width="212" Margin="20,467,0,0" Height="41" FontSize="20" FontWeight="Bold" FontFamily="Cambria" Click="btn_Refresh_Click"/>
+        <Button x:Name="btn_Refresh" Content="Refresh" HorizontalAlignment="Left" VerticalAlignment="Top" Width="212" Margin="20,467,0,0" Height="41" FontSize="20" FontWeight="Bold" Click="btn_Refresh_Click"/>
     </Grid>
 </Window>
 

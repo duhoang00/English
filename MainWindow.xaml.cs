@@ -21,6 +21,8 @@ namespace English
     /// </summary>
     public partial class MainWindow : Window
     {
+        String selectedkey;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -55,8 +57,8 @@ namespace English
         {
             if(lv_Words.SelectedItem != null)
             {
-                String key = lv_Words.SelectedItem.ToString().ToUpper();
-                EnglishWord EnglishWordWindow = new EnglishWord(key, "Show");
+                selectedkey = lv_Words.SelectedItem.ToString().ToUpper();
+                EnglishWord EnglishWordWindow = new EnglishWord(selectedkey, "Show");
             }
         }
 
@@ -67,10 +69,9 @@ namespace English
 
         private void btn_Delete_Click(object sender, RoutedEventArgs e)
         {
-            if (lv_Words.SelectedItem != null)
-            {
-                String key = lv_Words.SelectedItem.ToString().ToUpper();
-                EnglishWord EnglishWordWindow = new EnglishWord(key, "Delete");
+            if (selectedkey != null)
+            {               
+                EnglishWord EnglishWordWindow = new EnglishWord(selectedkey, "Delete");
             }
         }
 

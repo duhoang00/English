@@ -59,8 +59,25 @@ namespace English
 
             if (lenh == "Delete")
             {
-                StreamWriter writetext = File.AppendText(key[0].ToString() + ".txt");
+                string filePath = key[0].ToString() + ".txt";
+                FileStream fs = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
 
+                StreamReader readtext = new StreamReader(fs);
+                StreamWriter writetext = new StreamWriter(fs);
+
+                String s;
+                String All;
+                while ((s = readtext.ReadLine()) != null)
+                {                                                          
+                    if (s.Contains(key))
+                    {
+                        s = null;
+                    }
+                    All = All + s;
+                }
+                writetext.WriteLine(All);
+                writetext.Flush();
+                fs.Close();
             }
         }
 
@@ -85,14 +102,13 @@ namespace English
 
         private void btn_Delete_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("This word gonna be deleted \n This can not be undone \n Are you sure","WARNING!!!",MessageBoxButton.YesNo,MessageBoxImage.Warning);
+            MessageBoxResult result = MessageBox.Show("Everything has been written will be deleted \n This can not be undone \n Are you sure","WARNING!!!",MessageBoxButton.YesNo,MessageBoxImage.Warning);
             if (result == MessageBoxResult.Yes)
             {
                 txt_Word.Text = "";
                 txt_WordMeaning.Text = "";
                 txt_WordExample.Text = "";
                 cmb_WordType.SelectedItem = null;
-                this.Close();
             }
         }
 
