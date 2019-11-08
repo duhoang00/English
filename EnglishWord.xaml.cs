@@ -63,21 +63,31 @@ namespace English
                 FileStream fs = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
 
                 StreamReader readtext = new StreamReader(fs);
-                StreamWriter writetext = new StreamWriter(fs);
 
                 String s;
-                String All;
+                String All = "";
+                String ss = "";
+                Boolean flag = true;
                 while ((s = readtext.ReadLine()) != null)
-                {                                                          
-                    if (s.Contains(key))
+                {
+                    ss = "";
+                    flag = true;
+                    for (int i = 0; i < s.Length;i++)
                     {
-                        s = null;
+                        ss += s[i];
+                        if (ss == key)
+                        {
+                            flag = false;
+                            break;
+                        }
                     }
-                    All = All + s;
+                    if (flag == true)
+                    {
+                        All += s;
+                    }
                 }
-                writetext.WriteLine(All);
-                writetext.Flush();
                 fs.Close();
+                File.WriteAllText(key[0].ToString() + ".txt", All);                                                
             }
         }
 
