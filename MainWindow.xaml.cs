@@ -23,7 +23,7 @@ namespace English
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void Btn_Nhap_Click(object sender, RoutedEventArgs e)
@@ -37,12 +37,26 @@ namespace English
             if (txt_Seach.Text != "")
             {
                 String key = txt_Seach.Text.ToUpper();
-                EnglishWord EnglishWordWindow = new EnglishWord(key);
+                EnglishWord EnglishWordWindow = new EnglishWord(key, "Search");
             }
             else
             {
                 lv_Words.Items.Clear();
             }
+        }
+
+        private void lv_Words_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(lv_Words.SelectedItem != null)
+            {
+                EnglishWord EnglishWordWindow = new EnglishWord(txt_Seach.Text, "Show");
+            }
+        }
+
+        private void btn_Fix_Click(object sender, RoutedEventArgs e)
+        {
+            EnglishWord EnglishWordWindow = new EnglishWord();
+            EnglishWordWindow.Show();
         }
     }
 }

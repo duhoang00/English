@@ -11,6 +11,8 @@ namespace English
     class ArrayChuCai : MainWindow
     {
         public ListPhanTu[] DSPT = new ListPhanTu[26];
+        PhanTuNode Donald = new PhanTuNode();
+        MainWindow Form = Application.Current.Windows[0] as MainWindow;
 
         public ArrayChuCai()
         {
@@ -159,6 +161,7 @@ namespace English
                         }
                         else
                         {
+                            DSPT[n].tail.pre = DSPT[n].tail;
                             DSPT[n].tail.next = NodeTheWord;
                             DSPT[n].tail = NodeTheWord;
                         }
@@ -169,13 +172,11 @@ namespace English
 
         public void WordSearch(String key)
         {
-            DocTu();
             int ChuDauTien = Convert.ToInt32(key[0]) - 65;
             ListPhanTu CaiList = DSPT[ChuDauTien];
 
-            PhanTuNode Donald = CaiList.head;
-
-            MainWindow Form = Application.Current.Windows[0] as MainWindow;
+            Donald = CaiList.head;
+           
             Form.lv_Words.Items.Clear();
 
             while (Donald != null)
@@ -184,8 +185,18 @@ namespace English
                 {
                     Form.lv_Words.Items.Add(Donald.data.Word);                   
                 }
+                Donald.pre = Donald;
                 Donald = Donald.next;
             }
-        }       
+        } 
+        
+        public void Show(String key)
+        { 
+
+            Form.lbl_TheWord.Content = Donald.pre.data.Word;
+            Form.lbl_WordType.Content = Donald.pre.data.WordType;
+            Form.lbl_WordMeaning.Content = Donald.pre.data.WordMeaning;
+            Form.lbl_WordExample.Content = Donald.pre.data.WordExample;
+        }
     }
 }

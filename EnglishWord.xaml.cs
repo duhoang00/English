@@ -26,9 +26,17 @@ namespace English
             InitializeComponent();
         }
 
-        public EnglishWord(String key)
+        public EnglishWord(String key,String lenh)
         {
-            DS.WordSearch(key);
+            DS.DocTu();
+            if (lenh == "Search")
+            {
+                DS.WordSearch(key);
+            }
+            else if (lenh == "Show")
+            {
+                DS.Show(key);
+            }
         }
 
         private void btn_OK_Click(object sender, RoutedEventArgs e)

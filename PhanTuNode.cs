@@ -10,16 +10,17 @@ namespace English
     {       
         public PhanTu data;
         public PhanTuNode next;
+        public PhanTuNode pre;
 
         public PhanTuNode()
         {
-            next = null;
+            next = pre = null;
         }
 
         public PhanTuNode(PhanTu PT)
         {
             data = PT;
-            next = null;
+            next = pre = null;
         }
     }
 }
