@@ -46,18 +46,8 @@ namespace English
             //Viet nghia
             if (WordMeaning != "")
             {
-                for (int i = 0; i < WordMeaning.Length; i++)
-                {
-                    if (WordMeaning[i].ToString() == "\\n")
-                    {
-                        writetext.Write("+");
-                    }
-                    else
-                    {
-                        writetext.Write(WordMeaning[i]);
-                    }
-                }
-                writetext.Write("/");
+
+                writetext.Write(WordMeaning + "/");
             }
             else
             {
@@ -77,17 +67,7 @@ namespace English
             //Viet vi du tu
             if (WordExample != null)
             {
-                for (int i = 0; i < WordExample.Length; i++)
-                {
-                    if (WordExample[i].ToString() == "\\n")
-                    {
-                        writetext.Write("+");
-                    }
-                    else
-                    {
-                        writetext.Write(WordExample[i]);
-                    }
-                }
+                writetext.Write(WordExample + "/");
             }
             writetext.Close();
         }
@@ -163,6 +143,22 @@ namespace English
                             DSPT[n].tail.next = NodeTheWord;
                             DSPT[n].tail = NodeTheWord;
                         }
+                    }
+                }
+            }
+        }
+
+        public void ShowListWord()
+        {
+            for (int i = 0; i < 26; i++)
+            {
+                if (DSPT[i].FL != null)
+                {
+                    PhanTuNode Donald = DSPT[i].head;
+                    while (Donald != null)
+                    {
+                        Form.lv_Words.Items.Add(Donald.data.Word);
+                        Donald = Donald.next;
                     }
                 }
             }

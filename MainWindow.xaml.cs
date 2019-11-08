@@ -23,7 +23,13 @@ namespace English
     {
         public MainWindow()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            Loaded += MainWindow_Loaded;
+        }
+
+        void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            EnglishWord EnglishWordWindow = new EnglishWord("Showfulllist", "Du dep trai");
         }
 
         private void Btn_Nhap_Click(object sender, RoutedEventArgs e)

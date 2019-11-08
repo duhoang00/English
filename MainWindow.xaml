@@ -53,10 +53,10 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Label x:Name="lbl_TheWord" Content="Apple " HorizontalAlignment="Left" Height="50" Margin="18,10,0,0" VerticalAlignment="Top" Width="188" FontSize="36" FontWeight="Bold" Foreground="#FFA30B0B"/>
-                    <Label x:Name="lbl_WordMeaning" Content="- Quả táo&#xA;- Hãng công nghệ" HorizontalAlignment="Left" Height="162" Margin="18,108,0,0" VerticalAlignment="Top" Width="677" FontSize="36" FontFamily="Cambria" Foreground="Black"/>
-                    <Label x:Name="lbl_WordExample" Content="- Yesterday, I ate an apple and it was really &#xA;tasty&#xA;- I just bought a brand new Iphone from &#xA;Apple store and I don't understand why &#xA;they named their company is Apple" HorizontalAlignment="Left" Height="293" Margin="18,276,-0.4,0" VerticalAlignment="Top" Width="708" FontSize="36" FontFamily="Cambria"/>
-                    <Label x:Name="lbl_WordType" Content="noun" HorizontalAlignment="Left" Height="38" Margin="18,65,0,0" VerticalAlignment="Top" Width="384" FontSize="22" FontStyle="Italic"/>
+                    <Label x:Name="lbl_TheWord" Content="NAVIGATOR Advanced Learner's Dict" HorizontalAlignment="Left" Height="50" Margin="18,10,0,0" VerticalAlignment="Top" Width="697" FontSize="36" FontWeight="Bold" Foreground="#FFA30B0B"/>
+                    <Label x:Name="lbl_WordMeaning" Content="- Một đồ án môn học được phát triển bởi một nhóm sinh viên&#xD;&#xA;- Là một ứng dụng hỗ trợ học tiếng Anh&#xD;&#xA;- Không phải từ điển" HorizontalAlignment="Left" Height="197" Margin="18,108,0,0" VerticalAlignment="Top" Width="697" FontSize="36" FontFamily="Cambria" Foreground="White" Background="#FF908554"/>
+                    <Label x:Name="lbl_WordExample" Content="- This is an app for students to learn English&#xD;&#xA;- Using this app because it is free and fast&#xD;&#xA;- Made by ADDĐĐ&#xD;&#xA;- Version DS.T.1104.01" HorizontalAlignment="Left" Height="259" Margin="18,310,-0.4,0" VerticalAlignment="Top" Width="708" FontSize="36" FontFamily="Cambria"/>
+                    <Label x:Name="lbl_WordType" Content="Noun" HorizontalAlignment="Left" Height="38" Margin="18,65,0,0" VerticalAlignment="Top" Width="697" FontSize="22" FontStyle="Italic"/>
                     <Button x:Name="btn_Fix" Content="Change" FontWeight="Bold" HorizontalAlignment="Left" Height="57" Margin="628,503,0,0" VerticalAlignment="Top" Width="87" Click="btn_Fix_Click"/>
                 </Grid>
             </TabItem>
