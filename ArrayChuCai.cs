@@ -11,7 +11,7 @@ namespace English
     class ArrayChuCai : MainWindow
     {
         public ListPhanTu[] DSPT = new ListPhanTu[26];
-        PhanTuNode Donald = new PhanTuNode();
+        //PhanTuNode Donald = new PhanTuNode();
         MainWindow Form = Application.Current.Windows[0] as MainWindow;
 
         public ArrayChuCai()
@@ -41,7 +41,7 @@ namespace English
             StreamWriter writetext = File.AppendText(key + ".txt");
 
             //Viet tu tieng anh
-            writetext.Write(Word+"/");
+            writetext.Write(Word + "/");
 
             //Viet nghia
             if (WordMeaning != "")
@@ -89,8 +89,6 @@ namespace English
                     }
                 }
             }
-            writetext.WriteLine("|");
-
             writetext.Close();
         }
 
@@ -102,7 +100,7 @@ namespace English
                 //Check file co ton tai khong
                 if (File.Exists(c + ".txt")) {
                     String s;
-                    
+
                     //Mo file
                     StreamReader readtext = new StreamReader(c + ".txt");
 
@@ -129,17 +127,17 @@ namespace English
                             }
                             else if (s[i].ToString() == "/" && dem == 1)
                             {
-                                TheWord.WordType = ss;
+                                TheWord.WordMeaning = ss;                           
                                 ss = "";
                                 dem = 2;
                             }
                             else if (s[i].ToString() == "/" && dem == 2)
                             {
-                                TheWord.WordMeaning = ss;
+                                TheWord.WordType = ss;
                                 ss = "";
                                 dem = 3;
                             }
-                            else if (i == (s.Length -1) && dem == 3)
+                            else if (i == (s.Length - 1) && dem == 3)
                             {
                                 TheWord.WordExample = ss;
                                 ss = "";
@@ -154,10 +152,10 @@ namespace English
                         //Gan vao list
                         int n = Convert.ToInt32(c) - 65;
                         PhanTuNode Mickey = DSPT[n].head;
-                        
+
                         if (DSPT[n].head == null && DSPT[n].tail == null)
                         {
-                            DSPT[n].head = DSPT[n].tail = NodeTheWord; 
+                            DSPT[n].head = DSPT[n].tail = NodeTheWord;
                         }
                         else
                         {
@@ -170,8 +168,10 @@ namespace English
             }
         }
 
-        public void WordSearch(String key)
+        public ListPhanTu WordSearch(String key)
         {
+            PhanTuNode Donald = new PhanTuNode();
+
             int ChuDauTien = Convert.ToInt32(key[0]) - 65;
             ListPhanTu CaiList = DSPT[ChuDauTien];
 
@@ -188,15 +188,7 @@ namespace English
                 Donald.pre = Donald;
                 Donald = Donald.next;
             }
+            return CaiList;
         } 
-        
-        public void Show(String key)
-        { 
-
-            Form.lbl_TheWord.Content = Donald.pre.data.Word;
-            Form.lbl_WordType.Content = Donald.pre.data.WordType;
-            Form.lbl_WordMeaning.Content = Donald.pre.data.WordMeaning;
-            Form.lbl_WordExample.Content = Donald.pre.data.WordExample;
-        }
     }
 }

@@ -29,13 +29,20 @@ namespace English
         public EnglishWord(String key,String lenh)
         {
             DS.DocTu();
-            if (lenh == "Search")
+            ListPhanTu x = new ListPhanTu();
+            x = DS.WordSearch(key);
+            if (lenh == "Show")
             {
-                DS.WordSearch(key);
-            }
-            else if (lenh == "Show")
-            {
-                DS.Show(key);
+                PhanTuNode Mickey = x.head;
+                while(Mickey.data.Word != key && Mickey != null)
+                {
+                    Mickey = Mickey.next;
+                }
+                MainWindow Form = Application.Current.Windows[0] as MainWindow;
+                Form.lbl_TheWord.Content = Mickey.data.Word;
+                Form.lbl_WordType.Content = Mickey.data.WordType;
+                Form.lbl_WordMeaning.Content = "-" + Mickey.data.WordMeaning;
+                Form.lbl_WordExample.Content = "-" + Mickey.data.WordExample;
             }
         }
 
@@ -43,9 +50,7 @@ namespace English
         {
             if (txt_Word.Text != "")
             {
-                String Word = txt_Word.Text.ToUpper();
-                txt_WordExample.Text = "";
-                txt_WordMeaning.Text = "";
+                String Word = txt_Word.Text.ToUpper();                
                 String WordType = "";
                 WordType = this.cmb_WordType.SelectionBoxItem.ToString();
                 DS.ThemTu(Word, txt_WordMeaning.Text, WordType, txt_WordExample.Text);

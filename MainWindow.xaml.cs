@@ -49,7 +49,8 @@ namespace English
         {
             if(lv_Words.SelectedItem != null)
             {
-                EnglishWord EnglishWordWindow = new EnglishWord(txt_Seach.Text, "Show");
+                String key = lv_Words.SelectedItem.ToString().ToUpper();
+                EnglishWord EnglishWordWindow = new EnglishWord(key, "Show");
             }
         }
 

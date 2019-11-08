@@ -37,7 +37,7 @@
             <ListView x:Name="lv_Words" HorizontalAlignment="Left" Height="304" Margin="4,50,0,0" VerticalAlignment="Top" Width="213" SelectionChanged="lv_Words_SelectionChanged">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Words">
+                        <GridViewColumn Header="Words" Width="208px">
 
                         </GridViewColumn>
                     </GridView>
