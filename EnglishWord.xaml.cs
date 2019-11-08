@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace English
 {
@@ -54,6 +55,12 @@ namespace English
 
                 Mickey.data.WordExample = Mickey.data.WordExample.Replace("+", Environment.NewLine + "-");
                 Form.lbl_WordExample.Content = "-" + Mickey.data.WordExample;
+            }
+
+            if (lenh == "Delete")
+            {
+                StreamWriter writetext = File.AppendText(key[0].ToString() + ".txt");
+
             }
         }
 

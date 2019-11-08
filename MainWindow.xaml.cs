@@ -62,8 +62,21 @@ namespace English
 
         private void btn_Fix_Click(object sender, RoutedEventArgs e)
         {
-            EnglishWord EnglishWordWindow = new EnglishWord();
-            EnglishWordWindow.Show();
+            
+        }
+
+        private void btn_Delete_Click(object sender, RoutedEventArgs e)
+        {
+            if (lv_Words.SelectedItem != null)
+            {
+                String key = lv_Words.SelectedItem.ToString().ToUpper();
+                EnglishWord EnglishWordWindow = new EnglishWord(key, "Delete");
+            }
+        }
+
+        private void btn_Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            EnglishWord EnglishWordWindow = new EnglishWord("Showfulllist", "Du dep trai");
         }
     }
 }

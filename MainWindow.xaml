@@ -34,7 +34,7 @@
                     <GradientStop Color="#FFE2DEDE" Offset="0.198"/>
                 </LinearGradientBrush>
             </GroupBox.Background>
-            <ListView x:Name="lv_Words" HorizontalAlignment="Left" Height="304" Margin="4,50,0,0" VerticalAlignment="Top" Width="213" SelectionChanged="lv_Words_SelectionChanged">
+            <ListView x:Name="lv_Words" HorizontalAlignment="Left" Height="255" Margin="4,50,0,0" VerticalAlignment="Top" Width="213" SelectionChanged="lv_Words_SelectionChanged">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Words" Width="208px">
@@ -57,7 +57,8 @@
                     <Label x:Name="lbl_WordMeaning" Content="- Một đồ án môn học được phát triển bởi một nhóm sinh viên&#xD;&#xA;- Là một ứng dụng hỗ trợ học tiếng Anh&#xD;&#xA;- Không phải từ điển" HorizontalAlignment="Left" Height="197" Margin="18,108,0,0" VerticalAlignment="Top" Width="697" FontSize="36" FontFamily="Cambria" Foreground="White" Background="#FF908554"/>
                     <Label x:Name="lbl_WordExample" Content="- This is an app for students to learn English&#xD;&#xA;- Using this app because it is free and fast&#xD;&#xA;- Made by ADDĐĐ&#xD;&#xA;- Version DS.T.1104.01" HorizontalAlignment="Left" Height="259" Margin="18,310,-0.4,0" VerticalAlignment="Top" Width="708" FontSize="36" FontFamily="Cambria"/>
                     <Label x:Name="lbl_WordType" Content="Noun" HorizontalAlignment="Left" Height="38" Margin="18,65,0,0" VerticalAlignment="Top" Width="697" FontSize="22" FontStyle="Italic"/>
-                    <Button x:Name="btn_Fix" Content="Change" FontWeight="Bold" HorizontalAlignment="Left" Height="57" Margin="628,503,0,0" VerticalAlignment="Top" Width="87" Click="btn_Fix_Click"/>
+                    <Button x:Name="btn_Fix" Content="Change" FontWeight="Bold" HorizontalAlignment="Left" Height="57" Margin="536,503,0,0" VerticalAlignment="Top" Width="87" Click="btn_Fix_Click"/>
+                    <Button x:Name="btn_Delete" Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Margin="628,503,0,0" Height="57" FontWeight="Bold" Click="btn_Delete_Click"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tab_MyWord" Header="My words" FontSize="20" FontFamily="Cambria">
@@ -79,6 +80,7 @@
         <Label Content="Navigator" HorizontalAlignment="Left" Height="72" Margin="20,10,0,0" VerticalAlignment="Top" Width="212" FontSize="45" Foreground="White" FontFamily="Cambria"/>
         <Label Content="Advanced Learner's Dictionary" HorizontalAlignment="Left" Height="39" Margin="20,70,0,0" VerticalAlignment="Top" Width="212" FontSize="15" Foreground="White" FontFamily="Cambria"/>
         <Label Content="Search" HorizontalAlignment="Left" Height="35" Margin="10,109,0,0" VerticalAlignment="Top" Width="155" FontSize="20" Foreground="White"/>
+        <Button x:Name="btn_Refresh" Content="Refresh" HorizontalAlignment="Left" VerticalAlignment="Top" Width="212" Margin="20,467,0,0" Height="41" FontSize="20" FontWeight="Bold" FontFamily="Cambria" Click="btn_Refresh_Click"/>
     </Grid>
 </Window>
 

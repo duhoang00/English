@@ -62,13 +62,14 @@ namespace English
             else
             {
                 writetext.Write("");
-            }
+            }           
 
             //Viet vi du tu
             if (WordExample != null)
             {
                 writetext.Write(WordExample + "/");
             }
+            writetext.WriteLine();
             writetext.Close();
         }
 
