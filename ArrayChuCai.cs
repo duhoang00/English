@@ -187,6 +187,20 @@ namespace English
                 Donald = Donald.next;
             }
             return CaiList;
-        } 
+        }
+
+        public int[] CheckDS()
+        {
+            int[] check = new int[26];
+            for (Char c = 'A'; c <= 'Z'; c++)
+            {
+                //Check file co ton tai khong
+                if (File.Exists(c + ".txt"))
+                {
+                }
+            }
+                    
+                    return check;
+        }
     }
 }

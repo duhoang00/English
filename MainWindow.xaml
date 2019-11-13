@@ -76,7 +76,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button x:Name="btn_Game" Content="Game" HorizontalAlignment="Left" Height="41" Margin="20,563,0,0" VerticalAlignment="Top" Width="212" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="btn_Game" Content="Game" HorizontalAlignment="Left" Height="41" Margin="20,563,0,0" VerticalAlignment="Top" Width="212" FontSize="20" FontWeight="Bold" Click="Btn_Game_Click"/>
         <Label Content="Navigator" HorizontalAlignment="Left" Height="72" Margin="20,10,0,0" VerticalAlignment="Top" Width="212" FontSize="45" Foreground="White" FontFamily="Cambria"/>
         <Label Content="Advanced Learner's Dictionary" HorizontalAlignment="Left" Height="39" Margin="20,70,0,0" VerticalAlignment="Top" Width="212" FontSize="15" Foreground="White" FontFamily="Cambria"/>
         <Label Content="Search" HorizontalAlignment="Left" Height="35" Margin="10,109,0,0" VerticalAlignment="Top" Width="155" FontSize="20" Foreground="White"/>

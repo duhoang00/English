@@ -79,5 +79,11 @@ namespace English
         {
             EnglishWord EnglishWordWindow = new EnglishWord("Showfulllist", "Du dep trai");
         }
+
+        private void Btn_Game_Click(object sender, RoutedEventArgs e)
+        {
+            Game game = new Game();
+            game.Show();
+        }
     }
 }
