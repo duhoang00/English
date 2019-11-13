@@ -63,7 +63,7 @@ namespace English
                 FileStream fs = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
 
                 StreamReader readtext = new StreamReader(fs);
-
+                //aaaaaaa
                 String s;
                 String All = "";
                 String ss = "";
