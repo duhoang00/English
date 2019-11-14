@@ -22,28 +22,108 @@ namespace English
         public Game()
         {
             InitializeComponent();
-            ArrayChuCai taphop = new ArrayChuCai();
+            MessageBox.Show("Điền từ đúng, mỗi từ được 10đ.", "Hướng dẫn", MessageBoxButton.OK, MessageBoxImage.Information, MessageBoxResult.OK);
+            Start(Sothutu);
         }
-
+        Gamedata data = new Gamedata();
+        int Sothutu = 0;
+        int Score = 0;
+        private void Start(int i)
+        {
+            txt_Ques.Content = data.XuatQ(i);
+            btn_Ans1.Content = data.XuatA(i, 1);
+            btn_Ans2.Content = data.XuatA(i, 2);
+            btn_Ans3.Content = data.XuatA(i, 3);
+            btn_Ans4.Content = data.XuatA(i, 4);
+        }
 
         private void Btn_Ans1_Click(object sender, RoutedEventArgs e)
         {
-
+            Sothutu++;
+            Score++;
+            if(Sothutu == 10)
+            {
+                MessageBoxResult result = MessageBox.Show("Số điểm của bạn: " + Score * 10 + "\n Bạn có muốn chơi lại hông?", "Results", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result==MessageBoxResult.Yes)
+                {
+                    Sothutu = 0;
+                    Score = 0;
+                    Start(Sothutu);
+                }
+                else if(result == MessageBoxResult.No)
+                {
+                    Sothutu = 0;
+                    Score = 0;
+                    frmGame.Close();
+                }
+            }
+            Start(Sothutu);
         }
 
         private void Btn_Ans2_Click(object sender, RoutedEventArgs e)
         {
-
+            Sothutu++;
+            if (Sothutu == 10)
+            {
+                MessageBoxResult result = MessageBox.Show("Số điểm của bạn: " + Score * 10 + "\n Bạn có muốn chơi lại hông?", "Results", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    Sothutu = 0;
+                    Score = 0;
+                    Start(Sothutu);
+                }
+                else if (result == MessageBoxResult.No)
+                {
+                    Sothutu = 0;
+                    Score = 0;
+                    frmGame.Close();
+                }
+            }
+            Start(Sothutu);
         }
 
         private void Btn_Ans3_Click(object sender, RoutedEventArgs e)
         {
-
+            Sothutu++;
+            if (Sothutu == 10)
+            {
+                MessageBoxResult result = MessageBox.Show("Số điểm của bạn: " + Score * 10 + "\n Bạn có muốn chơi lại hông?", "Results", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    Sothutu = 0;
+                    Score = 0;
+                    Start(Sothutu);
+                }
+                else if (result == MessageBoxResult.No)
+                {
+                    Sothutu = 0;
+                    Score = 0;
+                    frmGame.Close();
+                }
+            }
+            Start(Sothutu);
         }
 
         private void Btn_Ans4_Click(object sender, RoutedEventArgs e)
         {
-
+            Sothutu++;
+            if (Sothutu == 10)
+            {
+                MessageBoxResult result = MessageBox.Show("Số điểm của bạn: " + Score * 10 + "\n Bạn có muốn chơi lại hông?", "Results", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    Sothutu = 0;
+                    Score = 0;
+                    Start(Sothutu);
+                }
+                else if (result == MessageBoxResult.No)
+                {
+                    Sothutu = 0;
+                    Score = 0;
+                    frmGame.Close();
+                }
+            }
+            Start(Sothutu);
         }
     }
 }
