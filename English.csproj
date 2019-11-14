@@ -58,6 +58,7 @@
     <Compile Include="Game.xaml.cs">
       <DependentUpon>Game.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Gamedata.cs" />
     <Compile Include="Giao-dien-tab-Dictionary.xaml.cs">
       <DependentUpon>Giao-dien-tab-Dictionary.xaml</DependentUpon>
     </Compile>
