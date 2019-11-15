@@ -9,10 +9,10 @@
     <Grid>
         <Image Source="Annotation 2019-11-13 133258.jpg" Stretch="Fill"/>
 
-        <Button x:Name="btn_Ans1" Content="" HorizontalAlignment="Left" Height="85" Margin="167,307,0,0" VerticalAlignment="Top" Width="205" FontSize="36" Click="Btn_Ans1_Click"/>
-        <Button x:Name="btn_Ans2" Content="" HorizontalAlignment="Left" Height="85" Margin="600,307,0,0" VerticalAlignment="Top" Width="205" FontSize="36" Click="Btn_Ans2_Click"/>
-        <Button x:Name="btn_Ans3" Content="" HorizontalAlignment="Left" Height="85" Margin="167,425,0,0" VerticalAlignment="Top" Width="205" FontSize="36" Click="Btn_Ans3_Click"/>
-        <Button x:Name="btn_Ans4" Content="" HorizontalAlignment="Left" Height="85" Margin="600,425,0,0" VerticalAlignment="Top" Width="205" FontSize="36" Click="Btn_Ans4_Click"/>
+        <Button x:Name="btn_Ans1" Content="" HorizontalAlignment="Left" Height="85" Margin="167,307,0,0" VerticalAlignment="Top" Width="205" FontSize="24" Click="Btn_Ans1_Click"/>
+        <Button x:Name="btn_Ans2" Content="" HorizontalAlignment="Left" Height="85" Margin="600,307,0,0" VerticalAlignment="Top" Width="205" FontSize="24" Click="Btn_Ans2_Click"/>
+        <Button x:Name="btn_Ans3" Content="" HorizontalAlignment="Left" Height="85" Margin="167,425,0,0" VerticalAlignment="Top" Width="205" FontSize="24" Click="Btn_Ans3_Click"/>
+        <Button x:Name="btn_Ans4" Content="" HorizontalAlignment="Left" Height="85" Margin="600,425,0,0" VerticalAlignment="Top" Width="205" FontSize="24" Click="Btn_Ans4_Click"/>
         <Label x:Name="txt_Ques" Content="" HorizontalAlignment="Left" Height="54" Margin="102,198,0,0" VerticalAlignment="Top" Width="790" Background="#FFFBFBFB" FontFamily="Times New Roman" FontSize="36">
             <Label.BorderBrush>
                 <SolidColorBrush Color="Black" Opacity="5"/>
