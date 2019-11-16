@@ -100,7 +100,16 @@ namespace English
                 WordType = this.cmb_WordType.SelectionBoxItem.ToString();
                 txt_WordMeaning.Text = txt_WordMeaning.Text.Replace(Environment.NewLine, "+");
                 txt_WordExample.Text = txt_WordExample.Text.Replace(Environment.NewLine, "+");
-                DS.ThemTu(Word, txt_WordMeaning.Text, WordType, txt_WordExample.Text);
+                string Status = "";
+                if (rbn_Mark.IsChecked== true)
+                {
+                    Status = "Mark";
+                }
+                else
+                {
+                    Status = "Unmark";
+                }
+                DS.ThemTu(Word, txt_WordMeaning.Text, WordType, txt_WordExample.Text,Status);
                 this.Close();
                 MessageBox.Show("Success", "Result", MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -119,18 +128,6 @@ namespace English
                 txt_WordMeaning.Text = "";
                 txt_WordExample.Text = "";
                 cmb_WordType.SelectedItem = null;
-            }
-        }
-
-        private void btn_Mark_Click(object sender, RoutedEventArgs e)
-        {
-            if(btn_Mark.Content.ToString() == "Mark")
-            {
-                btn_Mark.Content = "Unmark";
-            }
-            else if (btn_Mark.Content.ToString() == "Unmark")
-            {
-                btn_Mark.Content = "Mark";
             }
         }
     }

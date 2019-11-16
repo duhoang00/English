@@ -34,7 +34,7 @@ namespace English
             }
         }
 
-        public void ThemTu(String Word, String WordMeaning, String WordType, String WordExample)
+        public void ThemTu(String Word, String WordMeaning, String WordType, String WordExample,string Status)
         {
             //Mo file
             String key = Word[0].ToString();
@@ -44,14 +44,14 @@ namespace English
             writetext.Write(Word + "/");
 
             //Viet nghia
-            if (WordMeaning != "")
+            if (WordMeaning != null)
             {
 
                 writetext.Write(WordMeaning + "/");
             }
             else
             {
-                writetext.Write("");
+                writetext.Write(" /");
             }
 
             //Viet loai tu
@@ -61,7 +61,7 @@ namespace English
             }
             else
             {
-                writetext.Write("");
+                writetext.Write(" /");
             }           
 
             //Viet vi du tu
@@ -69,6 +69,13 @@ namespace English
             {
                 writetext.Write(WordExample + "/");
             }
+            else
+            {
+                writetext.Write(" /");
+            }
+
+            //Viet ve Mark
+            writetext.Write(Status);
             writetext.WriteLine();
             writetext.Close();
         }
@@ -118,11 +125,16 @@ namespace English
                                 ss = "";
                                 dem = 3;
                             }
-                            else if (i == (s.Length - 1) && dem == 3)
+                            else if (s[i].ToString() == "/" && dem == 3)
                             {
                                 TheWord.WordExample = ss;
                                 ss = "";
                                 dem = 4;
+                            }
+                            else if (i == (s.Length - 1) && dem == 4)
+                            {
+                                TheWord.Status = ss;
+                                ss = "";
                             }
                         }
                         //Duoc 1 TheWord

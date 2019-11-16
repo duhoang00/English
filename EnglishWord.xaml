@@ -23,19 +23,12 @@
         <TextBox x:Name="txt_WordExample" AcceptsReturn="True" HorizontalAlignment="Left" Height="132" Margin="168,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="601" FontSize="20"/>
         <Button x:Name="btn_OK" Content="OK" HorizontalAlignment="Left" Height="41" Margin="254,396,0,0" VerticalAlignment="Top" Width="169" FontSize="20" Background="#FF12BF14" BorderBrush="White" Foreground="White" Click="btn_OK_Click" FontWeight="Bold"/>
         <Button x:Name="btn_Delete" Content="Delete" HorizontalAlignment="Left" Height="41" Margin="506,396,0,0" VerticalAlignment="Top" Width="169" FontSize="20" Background="#FFFA1B00" BorderBrush="White" Foreground="White" FontWeight="Bold" Click="btn_Delete_Click"/>
-        <Button x:Name="btn_Mark" HorizontalAlignment="Left" Height="38" Margin="348,10,0,0" VerticalAlignment="Top" Width="63" Foreground="White" Click="btn_Mark_Click" Content="Mark" ClipToBounds="True" FontWeight="Bold">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF1B7B8E" Offset="0"/>
-                    <GradientStop Color="#FF33474B" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
         <ComboBox x:Name="cmb_WordType" HorizontalAlignment="Left" Height="38" Margin="168,216,0,0" VerticalAlignment="Top" Width="184" FontSize="20">
             <ComboBoxItem Content="Noun"/>
             <ComboBoxItem Content="Verb"/>
             <ComboBoxItem Content="Adjective"/>
             <ComboBoxItem Content="Adverb"/>
         </ComboBox>
+        <RadioButton x:Name="rbn_Mark" Content="Mark"  HorizontalAlignment="Left" Height="38" Margin="386,10,0,0" VerticalAlignment="Top" Width="99" ClickMode="Press" FontSize="24"/>
     </Grid>
 </Window>

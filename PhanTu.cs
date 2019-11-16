@@ -12,6 +12,7 @@ namespace English
         public String WordMeaning;
         public String WordType;
         public String WordExample;
+        public string Status;
 
         public PhanTu()
         {
@@ -19,14 +20,16 @@ namespace English
             WordMeaning = "";
             WordType = "";
             WordExample = "";
+            Status = "";
         }
 
-        public PhanTu(String Tu, String Nghia, String LoaiTu, String ViDu)
+        public PhanTu(String Tu, String Nghia, String LoaiTu, String ViDu,string Trangthai)
         {
             Word = Tu;
             WordMeaning = Nghia;
             WordType = LoaiTu;
             WordExample = ViDu;
+            Status = Trangthai;
         }
     }
 }
