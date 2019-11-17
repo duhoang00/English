@@ -164,6 +164,7 @@ namespace English
 
         public void ShowListWord()
         {
+            Form.lv_Mark.Items.Clear();
             for (int i = 0; i < 26; i++)
             {
                 if (DSPT[i].FL != null)
