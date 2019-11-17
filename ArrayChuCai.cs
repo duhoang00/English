@@ -171,13 +171,16 @@ namespace English
                     PhanTuNode Donald = DSPT[i].head;
                     while (Donald != null)
                     {
+                        if (Donald.data.Status == "Mark")
+                        {
+                            Form.lv_Mark.Items.Add(Donald.data.Word);
+                        }
                         Form.lv_Words.Items.Add(Donald.data.Word);
                         Donald = Donald.next;
                     }
                 }
             }
         }
-
         public ListPhanTu WordSearch(String key)
         {
             PhanTuNode Donald = new PhanTuNode();

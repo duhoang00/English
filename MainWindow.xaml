@@ -61,12 +61,12 @@
                     <Button x:Name="btn_Delete" Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Margin="628,503,0,0" Height="57" FontWeight="Bold" Click="btn_Delete_Click"/>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="tab_MyWord" Header="My words" FontSize="20" FontFamily="Cambria" Margin="-3.4,0,-1.6,-0.2">
+            <TabItem x:Name="tab_MyWord" Header="My words" FontSize="20" FontFamily="Cambria" Margin="-3,0,-2,0" Height="29" VerticalAlignment="Top">
                 <Grid Background="#FFDDD7B1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <ListView HorizontalAlignment="Left" Height="550" VerticalAlignment="Top" Width="702" Margin="10,10,0,0">
+                    <ListView x:Name="lv_Mark" HorizontalAlignment="Left" Height="550" VerticalAlignment="Top" Width="702" Margin="10,10,0,0">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn/>

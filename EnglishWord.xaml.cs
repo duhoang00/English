@@ -38,7 +38,6 @@ namespace English
             {
                 DS.ShowListWord();
             }
-
             if (lenh == "Show")
             {
                 PhanTuNode Mickey = x.head;
