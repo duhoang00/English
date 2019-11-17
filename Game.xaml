@@ -13,11 +13,9 @@
         <Button x:Name="btn_Ans2" Content="" HorizontalAlignment="Left" Height="85" Margin="600,307,0,0" VerticalAlignment="Top" Width="205" FontSize="24" Click="Btn_Ans2_Click"/>
         <Button x:Name="btn_Ans3" Content="" HorizontalAlignment="Left" Height="85" Margin="167,425,0,0" VerticalAlignment="Top" Width="205" FontSize="24" Click="Btn_Ans3_Click"/>
         <Button x:Name="btn_Ans4" Content="" HorizontalAlignment="Left" Height="85" Margin="600,425,0,0" VerticalAlignment="Top" Width="205" FontSize="24" Click="Btn_Ans4_Click"/>
-        <Label x:Name="txt_Ques" Content="" HorizontalAlignment="Left" Height="54" Margin="102,198,0,0" VerticalAlignment="Top" Width="790" Background="#FFFBFBFB" FontFamily="Times New Roman" FontSize="36">
-            <Label.BorderBrush>
-                <SolidColorBrush Color="Black" Opacity="5"/>
-            </Label.BorderBrush>
-        </Label>
+        <TextBlock x:Name="txt_Ques" HorizontalAlignment="Left" Height="151" Margin="102,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="826" FontSize="36"/>
+        <Label x:Name="lbl_Score" Content="" HorizontalAlignment="Left" Height="64" Margin="44,40,0,0" VerticalAlignment="Top" Width="102" Background="Black" Foreground="Red" FontSize="36"/>
+        <Label x:Name="lbl_Ques" Content="" HorizontalAlignment="Left" Height="64" Margin="851,40,0,0" VerticalAlignment="Top" Width="102" Background="Black" Foreground="Red" FontSize="36"/>
 
     </Grid>
 </Window>

@@ -30,13 +30,15 @@ namespace English
         }
         private void Start(int i)
         {
-            txt_Ques.Content = data.XuatQ(i);
+            txt_Ques.Text = data.XuatQ(i);
             int[] Pos = new int[] { 1, 2, 3, 4 };
             Random Rd = new Random();
             int a = Rd.Next(1, 3);
             int c = Pos[a];
             Pos[a] = Pos[0];
             Pos[0] = c;
+            lbl_Ques.Content = Sothutu + "/10";
+            lbl_Score.Content = Score*10 + "Đ";
             btn_Ans1.Content = data.XuatA(i, Pos[0]);
             btn_Ans2.Content = data.XuatA(i, Pos[1]);
             btn_Ans3.Content = data.XuatA(i, Pos[2]);
