@@ -82,7 +82,7 @@ namespace English
                     }
                     if (flag == true)
                     {
-                        All += s;
+                        All = All + s + "\n";
                     }
                 }
                 fs.Close();
@@ -108,7 +108,15 @@ namespace English
                 {
                     Status = "Unmark";
                 }
-                DS.ThemTu(Word, txt_WordMeaning.Text, WordType, txt_WordExample.Text,Status);
+                if (DS.Timtu(Word) != null)
+                {
+                    EnglishWord window = new EnglishWord(Word, "Delete");
+                    DS.ThemTu(Word, txt_WordMeaning.Text, WordType, txt_WordExample.Text, Status);
+                }
+                else
+                {
+                    DS.ThemTu(Word, txt_WordMeaning.Text, WordType, txt_WordExample.Text, Status);
+                }
                 this.Close();
                 MessageBox.Show("Success", "Result", MessageBoxButton.OK, MessageBoxImage.Information);
             }

@@ -203,6 +203,24 @@ namespace English
             }
             return CaiList;
         }
+        public PhanTuNode Timtu(string a)
+        {
+            PhanTuNode Donald = new PhanTuNode();
 
+            int ChuDauTien = Convert.ToInt32(a[0]) - 65;
+            ListPhanTu CaiList = DSPT[ChuDauTien];
+
+            Donald = CaiList.head;
+            while (Donald != null)
+            {
+                if (Donald.data.Word == a)
+                {
+                    break;
+                }
+                Donald.pre = Donald;
+                Donald = Donald.next;
+            }
+            return Donald;
+        }
     }
 }
