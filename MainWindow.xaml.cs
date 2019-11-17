@@ -64,7 +64,28 @@ namespace English
 
         private void btn_Fix_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (selectedkey != null)
+            {
+                ArrayChuCai DS = new ArrayChuCai();
+                DS.DocTu();
+                ListPhanTu x = new ListPhanTu();
+                x = DS.WordSearch(selectedkey);
+                PhanTuNode Duy = x.head;
+                while (Duy.data.Word != selectedkey && Duy != null)
+                {
+                    Duy = Duy.next;
+                }
+                EnglishWord EnglishWordWindow = new EnglishWord();
+                EnglishWordWindow.Show();
+                EnglishWordWindow.txt_Word.Text = Duy.data.Word;
+                EnglishWordWindow.txt_WordExample.Text = Duy.data.WordExample;
+                EnglishWordWindow.txt_WordMeaning.Text = Duy.data.WordMeaning;
+                EnglishWordWindow.cmb_WordType.Text = Duy.data.WordType;
+                if (Duy.data.Status =="Mark")
+                {
+                    EnglishWordWindow.rbn_Mark.IsChecked = true;
+                }
+            }
         }
 
         private void btn_Delete_Click(object sender, RoutedEventArgs e)
