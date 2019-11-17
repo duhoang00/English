@@ -85,6 +85,7 @@ namespace English
                 {
                     EnglishWordWindow.rbn_Mark.IsChecked = true;
                 }
+                EnglishWordWindow = new EnglishWord(selectedkey, "Delete");
             }
         }
 
